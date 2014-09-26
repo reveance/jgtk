@@ -4,7 +4,7 @@ jgtk
 A library to create user interfaces with components in a Graphics2D context.
 
 An example of how to create an interface:
-```
+```java
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Cursor;
@@ -201,7 +201,7 @@ public class CustomPaint extends UICanvas {
 ```
 
 You can preview your paint easily by creating the following main method somewhere:
-```
+```java
 public static void main(String[] args) {
 	final JPaintFrame paintFrame = new JPaintFrame();
 	
