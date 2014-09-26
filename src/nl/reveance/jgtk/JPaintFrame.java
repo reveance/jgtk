@@ -1,4 +1,4 @@
-package nl.reveance.jgtk.paint;
+package nl.reveance.jgtk;
 
 import javax.swing.JFrame;
 

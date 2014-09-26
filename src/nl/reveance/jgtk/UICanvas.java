@@ -1,4 +1,4 @@
-package nl.reveance.jgtk.paint;
+package nl.reveance.jgtk;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import nl.reveance.jgtk.paint.components.PContainer;
+import nl.reveance.jgtk.components.PContainer;
 
 import org.osbot.rs07.canvas.paint.Painter;
 

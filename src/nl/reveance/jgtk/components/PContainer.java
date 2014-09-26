@@ -1,11 +1,11 @@
-package nl.reveance.jgtk.paint.components;
+package nl.reveance.jgtk.components;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.reveance.jgtk.paint.exception.HierarchyException;
+import nl.reveance.jgtk.exception.HierarchyException;
 
 public class PContainer extends PComponent {
 	List<PComponent> components;

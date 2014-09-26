@@ -1,4 +1,4 @@
-package nl.reveance.jgtk.paint.rendering;
+package nl.reveance.jgtk.rendering;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -8,7 +8,7 @@ import java.awt.Shape;
 import java.awt.Stroke;
 import java.awt.geom.AffineTransform;
 
-import nl.reveance.jgtk.paint.components.PComponent;
+import nl.reveance.jgtk.components.PComponent;
 
 /**
  * This class grabs desired properties from a {@link Graphics2D} object which

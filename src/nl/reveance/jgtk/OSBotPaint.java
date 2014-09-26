@@ -1,4 +1,4 @@
-package nl.reveance.jgtk.paint;
+package nl.reveance.jgtk;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

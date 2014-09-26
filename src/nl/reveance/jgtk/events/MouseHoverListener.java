@@ -1,8 +1,8 @@
-package nl.reveance.jgtk.paint.events;
+package nl.reveance.jgtk.events;
 
 import java.awt.event.MouseEvent;
 
-import nl.reveance.jgtk.paint.components.PComponent;
+import nl.reveance.jgtk.components.PComponent;
 
 /**
  * An interface to listen to hover changes from a {@link PComponent}

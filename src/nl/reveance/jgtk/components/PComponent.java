@@ -1,7 +1,7 @@
-package nl.reveance.jgtk.paint.components;
+package nl.reveance.jgtk.components;
 
-import nl.reveance.jgtk.paint.events.MouseHoverListener;
-import nl.reveance.jgtk.paint.rendering.DrawParameterRestorer;
+import nl.reveance.jgtk.events.MouseHoverListener;
+import nl.reveance.jgtk.rendering.DrawParameterRestorer;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;

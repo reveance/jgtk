@@ -1,4 +1,4 @@
-package nl.reveance.jgtk.paint.exception;
+package nl.reveance.jgtk.exception;
 
 public class HierarchyException extends Exception {
 

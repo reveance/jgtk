@@ -1,4 +1,4 @@
-package nl.reveance.jgtk.paint.components;
+package nl.reveance.jgtk.components;
 
 import java.awt.*;
 
