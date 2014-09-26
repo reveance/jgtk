@@ -90,11 +90,22 @@ public abstract class PComponent {
 			if (dpr == null)
 				dpr = new DrawParameterRestorer();
 
-
-			if(getParent() != null) {
-				g.setClip(getParent().getAbsoluteBounds());
+			// Calculate the clip by traversing over the parents (which are
+			// always PContainers). The clip is the intersection of all of the
+			// bounds of the parents.
+			PComponent parent = this;
+			Rectangle clip = null;
+			while ((parent = parent.getParent()) != null) {
+				if (clip == null)
+					clip = parent.getAbsoluteBounds();
+				else
+					clip = clip.intersection(parent.getAbsoluteBounds());
 			}
-			
+
+			if (clip != null) {
+				g.setClip(clip);
+			}
+
 			dpr.grab(g);
 
 			if (this.getBorder() != null) {
@@ -103,6 +114,9 @@ public abstract class PComponent {
 
 				g.setStroke(this.getBorder());
 
+				// Calculate border bounds which is a bit larger than the
+				// regular bounds because of the linewidth of the border. Border
+				// is not included in the bounds of the component.
 				Rectangle drawBounds = getAbsoluteBounds();
 				float lw = getBorder().getLineWidth();
 				drawBounds.setSize(drawBounds.width + (int) lw,
@@ -117,7 +131,7 @@ public abstract class PComponent {
 				g.setColor(getBackgroundColor());
 				g.fill(getAbsoluteBounds());
 			}
-						
+
 			if (this.getBackgroundImage() != null) {
 				if (getBackgroundImageSize() == null) {
 					g.drawImage(getBackgroundImage(), getAbsoluteBounds().x,
@@ -131,7 +145,9 @@ public abstract class PComponent {
 							getBackgroundColor(), getBackgroundImageObserver());
 				}
 			}
-			
+
+			// Restore the parameters used above for the drawing of the
+			// element-specific things
 			dpr.restore(g);
 
 			this.draw(g);
