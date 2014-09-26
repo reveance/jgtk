@@ -1,4 +1,4 @@
-jgtk
+Java Graphics2D Toolkit
 ====
 
 A library to create user interfaces with components in a Graphics2D context.
